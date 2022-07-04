@@ -21,10 +21,12 @@
 title: VoidMoose.com
 email: voidmoose@voidmoose.com
 description: >- # this means to ignore newlines until "baseurl:"
-  TODO DESCRIPTION
+  VoidMoose project gallery
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://voidmoose.com" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  sxmxc
+
+show_downloads: true
 
 # Build settings
 remote_theme: pages-themes/hacker@v0.2.0
