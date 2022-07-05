@@ -25,5 +25,55 @@ header {
 }
 
 .current {
-  color: $primary-color;
+    color: $primary-color;
+}
+
+img.logo {
+    width: 200px;
+    height: 200px;
+    align-self: center;
+}
+
+h1.title {
+    position: relative;
+}
+
+section#title {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.justify-end {
+    justify-content: end;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+#a-title {
+    align-self: center;
+    display: flex;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.nav-link {
+    flex: auto;
+    text-align: center;
+
 }
