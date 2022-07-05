@@ -2,3 +2,27 @@
 ---
 
 @import "{{ site.theme }}";
+
+.align-right {
+    float: right;
+}
+
+.align-left {
+    float: left
+}
+
+#repos {
+    float: right;
+    display: block;
+}
+
+#downloads {
+    float: left;
+    display: block;
+}
+
+header {
+    display: inline-block;
+}
+
+
