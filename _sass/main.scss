@@ -1,0 +1,29 @@
+$primary-color: #b5e853;
+$secondary-color: #666;
+
+
+.align-right {
+    float: right;
+}
+
+.align-left {
+    float: left
+}
+
+#repos {
+    float: right;
+    display: block;
+}
+
+#downloads {
+    float: left;
+    display: block;
+}
+
+header {
+    display: inline-block;
+}
+
+.current {
+  color: $primary-color;
+}
