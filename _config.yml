@@ -30,6 +30,7 @@ show_downloads: true
 collections:
   authors:
     output: true
+    permalink: /l33ts/:name:output_ext
 
 defaults:
   - scope:
@@ -62,6 +63,8 @@ plugins:
   - jekyll-remote-theme
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-compose
+  - jekyll-datapage-generator
 
 # Exclude from processing.
 # The following items will not be processed, by default.
