@@ -77,3 +77,24 @@ nav {
     text-align: center;
 
 }
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    /* Footer height */
+}
+
+#main_content {
+    padding-bottom: 2.5rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* Footer height */
+}
+
+#page_container {
+    position: relative;
+    min-height: 100vh;
+}
