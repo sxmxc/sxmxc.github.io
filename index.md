@@ -1,8 +1,8 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+title: "Embrace the void"
+layout: "home"
 ---
-# __Embrace the void__ {#home_title}
+# _Embrace the void_ {#home_title}
 
 <center>Site made with</center>
 
