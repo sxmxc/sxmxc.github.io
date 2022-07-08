@@ -1,6 +1,9 @@
 $primary-color: #b5e853;
 $secondary-color: #666;
 
+h2 {
+    color: $secondary-color;
+}
 
 .align-right {
     float: right;
@@ -79,22 +82,61 @@ nav {
 }
 
 #footer {
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100%;
-    height: 2.5rem;
     /* Footer height */
+    height: 2.5rem;
+    border-top: 1px dashed #b5e853;
+
 }
 
 #main_content {
+    /* Footer height */
     padding-bottom: 2.5rem;
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    /* Footer height */
+
 }
 
 #page_container {
+    align-content: center;
+    display: flex;
     position: relative;
-    min-height: 100vh;
+}
+
+.github {
+    margin-right: 2em;
+}
+
+.flex-4 {
+    flex-grow: 4;
+}
+
+.flex-3 {
+    flex-grow: 3;
+}
+
+.flex-2 {
+    flex-grow: 2;
+}
+
+.flex-point1 {
+    flex-grow: .1;
+}
+
+.copyright {
+    justify-content: end;
+}
+
+#home_title {
+    text-align: center;
+}
+
+#home_content {
+    text-align: center;
+}
+
+.jekyll_logo {
+    text-align: center;
 }

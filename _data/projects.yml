@@ -1,0 +1,8 @@
+- name: "ghostly_whale"
+  repo: "https://github.com/sxmxc/ghostly_whale"
+- name: "trashy_baboon"
+  repo: "https://github.com/sxmxc/trashy_baboon"
+- name: "rusty_automato"
+  repo: "https://github.com/sxmxc/rusty-automato"
+- name: "ghostly_cloud"
+  repo: "https://github.com/sxmxc/ghostly_cloud"
