@@ -2,16 +2,14 @@
 title: VoidMoose l33ts
 ---
 <h1>The L33Ts</h1>
-The L33Ts have helped to will
-<a href="https://voidmoose.com">voidmoose.com</a>
-into existence
+<p>The L33Ts have helped to will <a href="https://voidmoose.com">voidmoose.com</a> into existence</p>
 <ul>
     {% for author in site.authors %}
         <li>
             <h2>
                 <a href="{{ author.url }}">{{ author.name }}</a>
             </h2>
-            <h3>{{ author.position }}</h3>
+            <h2>{{ author.position }}</h2>
             <p>{{ author.content | markdownify }}</p>
         </li>
     {% endfor %}

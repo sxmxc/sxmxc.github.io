@@ -2,8 +2,11 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 ---
-# _Embrace the void_
+# __Embrace the void__ {#home_title}
 
-Site made with
+<center>Site made with</center>
 
-[![Jekyll logo](http://jekyllrb.com/img/logo-2x.png)](http://jekyllrb.com/img/logo-2x.png)
+<figure class="jekyll_logo">
+    <img class="center" src="http://jekyllrb.com/img/logo-2x.png"
+         alt="Jekyll logo">
+</figure>
