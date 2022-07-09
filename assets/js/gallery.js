@@ -190,6 +190,13 @@ function init() {
         },
         "--card-translateY-offset": "0%",
     })
+        .to(cardInfosContainerEl.querySelectorAll(".info"), {
+            delay: 0.5,
+            duration: 0.4,
+            stagger: 0.1,
+            opacity: 1,
+            translateY: 0,
+        })
         .to(cardInfosContainerEl.querySelector(".current--info").querySelectorAll(".text"), {
             delay: 0.5,
             duration: 0.4,
@@ -213,6 +220,7 @@ const waitForImages = () => {
     const totalImages = images.length;
     let loadedImages = 0;
     const loaderEl = document.querySelector(".loader span");
+
 
     gsap.set(cardsContainerEl.children, {
         "--card-translateY-offset": "100%",

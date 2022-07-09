@@ -159,3 +159,11 @@ nav>a {
 .jekyll_logo {
     text-align: center;
 }
+
+#name_span, #position_span {
+    color: $tertiary-color;
+}
+
+#position_span {
+    font-size: small;
+}
