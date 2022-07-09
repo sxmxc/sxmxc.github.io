@@ -1,5 +1,7 @@
 $primary-color: #b5e853;
 $secondary-color: #666;
+$tertiary-color: Magenta;
+
 
 h2 {
     color: $secondary-color;
@@ -83,6 +85,19 @@ nav {
     flex: auto;
     text-align: center;
 
+}
+
+nav>a {
+    display: block;
+    color: $secondary-color;
+    padding: 8px 16px;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px $secondary-color, 0 0 .5em $tertiary-color, 0 0 0.2em $secondary-color;
+
+    &:hover {
+        background-color: $secondary-color;
+        color: $tertiary-color;
+    }
 }
 
 #footer {
