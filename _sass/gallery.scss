@@ -249,12 +249,12 @@ button {
         position: relative;
         font-family: "Montserrat";
         font-size: xx-large;
-        color: $secondary-color;
+        color: $primary-color;
         width: fit-content;
     }
 
     small {
-        color: $primary-color;
+        color: $secondary-color;
         font-size: medium;
 
         &::after {}
@@ -283,7 +283,7 @@ button {
         &::after {
             content: "";
             position: absolute;
-            background: #fff;
+            background: $tertiary-color;
             left: 0%;
             transform: translate(calc(-1 * var(--mg-left)), -50%);
         }
@@ -310,6 +310,7 @@ button {
     &.current--info {
         opacity: 1;
         display: block;
+        background-color: rgba(1, 1, 1, .5);
     }
 
     &.previous--info,
