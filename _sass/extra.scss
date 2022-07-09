@@ -1,6 +1,10 @@
+@import url("https://fonts.googleapis.com/css?family=Nova+Flat");
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
+
 :root {
     --g1: #666;
     --g2: #b5e853;
+    --g3: Magenta;
 }
 
 @keyframes background-pan {
@@ -18,6 +22,7 @@
     background: linear-gradient(to right,
             var(--g1),
             var(--g2),
+            var(--g3),
             var(--g1));
     background-size: 200%;
     height: 100vh;
@@ -33,8 +38,32 @@
     opacity: 0;
 }
 
+#tile_container.toggled>.glitch-container {
+    opacity: 0;
+}
+
+#tile_container.toggled>.glitch-container>.glitch {
+
+    animation: none;
+
+    &::after,
+    &::before {
+        animation: none;
+    }
+}
+
+#tile_container.toggled>.glitch-container>.glow {
+
+    animation: none;
+
+    &::after,
+    &::before {
+        animation: none;
+    }
+}
+
 #tile_container.toggled>#icon {
-    opacity: 1;
+    opacity: .5;
 }
 
 #tile_container.toggled>#tiles>.tile:hover {
@@ -65,7 +94,7 @@
 }
 
 .tile:hover:before {
-    background-color: var(--g2);
+    background-color: var(--g3);
 }
 
 .tile:before {
@@ -77,14 +106,15 @@
 
 #title {
     color: var(--g1);
-    font-family: "Rubik", sans-serif;
+    font-family: "Nova Flat", sans-serif;
     font-size: 6vw;
-    margin: 0px;
+    margin: 0 auto;
     pointer-events: none;
     transition: opacity 1200ms ease;
     width: 50vw;
     z-index: 3;
     text-align: center;
+
 
     &::before {
         content: none;
@@ -93,7 +123,7 @@
 
 #title>.fancy {
     color: var(--g2);
-    font-family: "Rubik Moonrocks", sans-serif;
+
     font-size: 1.5em;
     line-height: 0.9em;
     font-weight: unset !important;
@@ -108,4 +138,150 @@
     z-index: 1;
     max-width: 500px;
     max-height: 500px;
+}
+
+.glitch-container {
+    transition: opacity 1200ms ease;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 67%;
+    left: 50%;
+
+    font-family: "Press Start 2P", sans-serif;
+    font-style: italic;
+    z-index: 2;
+    text-align: center;
+    pointer-events: none;
+}
+
+.glitch {
+    transition: opacity 1200ms ease;
+    color: var(--g2);
+    position: relative;
+    font-size: 9vw;
+    // margin: 70px 200px;
+    animation: glitch 5s 5s infinite;
+}
+
+.glitch::before {
+    transition: opacity 1200ms ease;
+    content: attr(data-text);
+    position: absolute;
+    left: -2px;
+    text-shadow: -5px 0 magenta;
+    overflow: hidden;
+    top: 0;
+    animation: noise-1 3s linear infinite alternate-reverse, glitch 5s 5.05s infinite;
+}
+
+.glitch::after {
+    transition: opacity 1200ms ease;
+    content: attr(data-text);
+    position: absolute;
+    left: 2px;
+    text-shadow: -5px 0 lightgreen;
+    overflow: hidden;
+    top: 0;
+    animation: noise-2 3s linear infinite alternate-reverse, glitch 5s 5s infinite;
+}
+
+@keyframes glitch {
+    1% {
+        transform: rotateX(10deg) skewX(90deg);
+    }
+
+    2% {
+        transform: rotateX(0deg) skewX(0deg);
+    }
+}
+
+@keyframes noise-1 {
+    $steps: 30;
+
+    @for $i from 1 through $steps {
+        #{percentage($i*(1/$steps))} {
+            $top: random(100);
+            $bottom: random(101 - $top);
+            clip-path: inset(#{$top}px 0 #{$bottom}px 0);
+        }
+    }
+}
+
+@keyframes noise-2 {
+    $steps: 30;
+
+    @for $i from 0 through $steps {
+        #{percentage($i*(1/$steps))} {
+            $top: random(100);
+            $bottom: random(101 - $top);
+            clip-path: inset(#{$top}px 0 #{$bottom}px 0);
+        }
+    }
+}
+
+.scanlines {
+    overflow: hidden;
+    mix-blend-mode: difference;
+}
+
+.scanlines::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    background: repeating-linear-gradient(to bottom,
+            transparent 0%,
+            rgba(255, 255, 255, 0.05) .5%,
+            transparent 1%);
+
+    animation: fudge 7s ease-in-out alternate infinite;
+}
+
+
+@keyframes fudge {
+    from {
+        transform: translate(0px, 0px);
+    }
+
+    to {
+        transform: translate(0px, 2%);
+    }
+}
+
+.glow {
+    @extend .glitch;
+    text-shadow: 0 0 1000px rgb(223, 191, 191);
+    color: transparent;
+    position: absolute;
+    top: 0;
+}
+
+.subtitle {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: .8vw;
+    color: rgba(165, 141, 141, .4);
+    text-transform: uppercase;
+    letter-spacing: 1em;
+    text-align: center;
+    position: absolute;
+    left: 17%;
+    animation: glitch-2 5s 5.02s infinite;
+}
+
+@keyframes glitch-2 {
+    1% {
+        transform: rotateX(10deg) skewX(70deg);
+    }
+
+    2% {
+        transform: rotateX(0deg) skewX(0deg);
+    }
+}
+
+.flex-box {
+    display: flex;
 }
