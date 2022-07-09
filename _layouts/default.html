@@ -16,6 +16,11 @@
     <div id="page_container"class="container">
         <div id="main_content">
             {{ content }}
+            {% if page.js %}
+            {% for js_file in page.js %}
+            <script src='{{ site.baseurl }}/assets/js/{{ js_file }}.js' type="text/javascript"></script>
+            {% endfor %}
+            {% endif %}
         </div>
     </div>
     {% include footer.html %}
