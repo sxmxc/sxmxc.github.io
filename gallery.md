@@ -1,5 +1,8 @@
 ---
 title: Projects
 layout: project-gallery
+css: app
+js: gallery
 ---
-# Project Gallery
+
+{% include gallery.html %}

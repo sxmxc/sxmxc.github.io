@@ -1,26 +1,97 @@
-<div class="image-gallery">
-    <!--   {% assign sorted = site.static_files | sort: 'date' | reverse %}
-    {% for file in sorted %}
-    {% if file.path contains include.folder %}
-    {% if file.extname == '.png' %}
-    {% assign filenameparts = file.path | split: "/" %}
-    {% assign filename = filenameparts | last | replace: file.extname,"" %}
-    <div class="box"><a href="{{ file.path | relative_url }}" title="{{ filename }}">
-            <img src="{{ site.thumbsurl }}{{file.name }} " alt="{{ filename }}" class="img-gallery" />
-        </a></div>
-    {% endif %}
-    {% endif %}
-    {% endfor %} -->
-    <p>Gallery to go here soon for the following projects:</p>
-       
-    <ul>
-        {% for item in site.data.projects %}
-            <li>
-                <a href="{{ item.repo }}" class="nav-link">
-                    {{ item.name }}
-                </a>
-            </li>
+<div class="app">
 
-        {% endfor %}
-    </ul>
+    <div class="cardList">
+        <button class="cardList__btn btn btn--left">
+            <div class="icon">
+                <svg>
+                    <use xlink:href="#arrow-left"></use>
+                </svg>
+            </div>
+        </button>
+
+        <div class="cards__wrapper">
+            <div class="card current--card">
+                <div class="card__image">
+                    <img src="/assets/images/pixel3.png" alt="" />
+                </div>
+            </div>
+
+            <div class="card next--card">
+                <div class="card__image">
+                    <img src="/assets/images/fibers.jpg" alt="" />
+                </div>
+            </div>
+
+            <div class="card previous--card">
+                <div class="card__image">
+                    <img src="/assets/images/pixel1.png" alt="" />
+                </div>
+            </div>
+        </div>
+
+        <button class="cardList__btn btn btn--right">
+            <div class="icon">
+                <svg>
+                    <use xlink:href="#arrow-right"></use>
+                </svg>
+            </div>
+        </button>
+    </div>
+
+    <div class="infoList">
+        <div class="info__wrapper">
+            <div class="info current--info">
+                <h1 class="text name"><small>CODENAME</small> trashy-baboon</h1>
+                <h4 class="text location">Tactical RPG, 2D</h4>
+                <p class="text description">My money's in that office, riddly-right? If she start giving me some diddly about it ain't there, and we got to go
+                someplace else and get it, i'm gonna shoot you in the head then and there! </p>
+            </div>
+
+            <div class="info next--info">
+                <h1 class="text name"><small>CODENAME</small> ghostly-whale</h1>
+                <h4 class="text location">Physics based, 2D, Mobile</h4>
+                <p class="text description">My money's in that office, riddly-right? If she start giving me some diddly about it ain't there, and we got to go
+                someplace else and get it, i'm gonna shoot you in the head then and there!</p>
+            </div>
+
+            <div class="info previous--info">
+                <h1 class="text name"><small>CODENAME</small> emerald-whombat</h1>
+                <h4 class="text location">Farming, RPG, Action</h4>
+                <p class="text description">My money's in that office, riddly-right? If she start giving me some diddly about it ain't there, and we got to go
+                someplace else and get it, i'm gonna shoot you in the head then and there!</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="app__bg">
+        <div class="app__bg__image current--image">
+            <img src="/assets/images/pixel3.png" alt="" />
+        </div>
+        <div class="app__bg__image next--image">
+            <img src="/assets/images/fibers.jpg" alt="" />
+        </div>
+        <div class="app__bg__image previous--image">
+            <img src="/assets/images/pixel1.png" alt="" />
+        </div>
+    </div>
 </div>
+
+<div class="loading__wrapper">
+    <div class="loader--text">Loading...</div>
+    <div class="loader">
+        <span></span>
+    </div>
+</div>
+
+
+<svg class="icons" style="display: none;">
+    <symbol id="arrow-left" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+        <polyline points='328 112 184 256 328 400'
+            style='fill:none;stroke:#b5e853;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+    </symbol>
+    <symbol id="arrow-right" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+        <polyline points='184 112 328 256 184 400'
+            style='fill:none;stroke:#b5e853;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+    </symbol>
+</svg>
