@@ -50,7 +50,7 @@
 
 #tiles {
     height: calc(100vh - 1px);
-    width: calc(100vw - 5px);
+    width: calc(100vw - 1px);
     position: relative;
     z-index: 2;
 
@@ -65,7 +65,7 @@
 }
 
 .tile:hover:before {
-    background-color: rgb(30, 30, 30);
+    background-color: var(--g2);
 }
 
 .tile:before {
@@ -96,6 +96,7 @@
     font-family: "Rubik Moonrocks", sans-serif;
     font-size: 1.5em;
     line-height: 0.9em;
+    font-weight: unset !important;
 }
 
 #icon {
