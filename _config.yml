@@ -20,8 +20,8 @@
 
 title: voidmoose.com
 email: voidmoose@voidmoose.com
-description: >- # this means to ignore newlines until "baseurl:"
-  voidmoose project gallery
+# description: >- # this means to ignore newlines until "baseurl:"
+#   | voidmoose project gallery
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://voidmoose.com" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  sxmxc

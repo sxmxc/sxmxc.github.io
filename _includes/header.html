@@ -11,22 +11,32 @@
             </div>
         </section>
 
-        <div class="container flex-row justify-between">
-            <section id="downloads">
+        <div class="flex-row half-width justify-evenly">
+           
                 {% if site.show_downloads %}
-                <div>
-                    <a href="{{ site.github.zip_url }}" class="btn">Download as .zip</a>
-                    <a href="{{ site.github.tar_url }}" class="btn">Download as .tar.gz</a>
-                </div>
-            
+                <button class="cybr-btn">
+                    Download<span aria-hidden>_</span>
+                    <span aria-hidden class="cybr-btn__glitch"><a href="{{ site.github.zip_url }}">Zip</a></span>
+                    <span aria-hidden class="cybr-btn__tag">voidmoose</span>
+                </button>
+                <button class="cybr-btn">
+                    Download<span aria-hidden>_</span>
+                    <span aria-hidden class="cybr-btn__glitch"><a href="{{ site.github.tar_url }}">Tarball</a></span>
+                    <span aria-hidden class="cybr-btn__tag">voidmoose</span>
+                </button>
                 {% endif %}
-            </section>
-            
-            <section id="repos">
-                <a href="{{ site.github.repository_url }}" class="btn btn-github"><span class="icon"></span>View this
-                    repo</a>
-                <a href="https://github.com/sxmxc" class="btn btn-github"><span class="icon"></span>View other repos</a>
-            </section>
+                <button class="cybr-btn">
+                    View<span aria-hidden>_</span>
+                    <span aria-hidden class="cybr-btn__glitch"><a href="{{ site.github.repository_url }}">This repo</a></span>
+                    <span aria-hidden class="cybr-btn__tag">voidmoose</span>
+                </button>
+                <button class="cybr-btn">
+                    View<span aria-hidden>_</span>
+                    <span aria-hidden class="cybr-btn__glitch"><a  href="https://github.com/sxmxc">Other repos</a></span>
+                    <span aria-hidden class="cybr-btn__tag">voidmoose</span>
+                </button>
+      
+           
 
         </div>
 
